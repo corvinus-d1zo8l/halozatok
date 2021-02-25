@@ -1,0 +1,43 @@
+﻿div
+{
+    border: 1px solid coral;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 10px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+span
+{
+    color: coral;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+}
+
+#listak
+{
+    background-color: lightgrey;
+}
+
+.megisfeher
+{
+    background-color: white;
+    border-radius: 25px;
+    width: 20%;
+}
+
+.sorrendi
+{
+    font-style: italic
+}
+
+img
+{
+    margin: auto;
+    display: block;
+}
