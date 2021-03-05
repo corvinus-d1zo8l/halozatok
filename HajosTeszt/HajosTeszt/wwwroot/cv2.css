@@ -1,0 +1,69 @@
+﻿{
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: bold;
+    text-align: center;
+}
+
+#article,
+#aside,
+#header,
+#nav {
+    padding: 20px;
+}
+
+#header {
+    background-color: orange;
+}
+
+#nav {
+    background: deepskyblue;
+}
+
+#article {
+    text-align: left;
+    background-color:cadetblue;
+}
+
+#aside {
+    background-color: whitesmoke;
+    text-align: left;
+}
+
+#nav {
+    display: flex;
+    text-align:left;
+}
+
+    #nav ol {
+        flex: 1 1 auto;
+        text-decoration: none;
+        color: black;
+    }
+
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    #main {
+        display: flex;
+    }
+
+    #header {
+        order: -1;
+    }
+
+    #article {
+        flex: 1 1 75%;
+    }
+
+    #aside {
+        flex: 1 1 25%;
+    }
+}

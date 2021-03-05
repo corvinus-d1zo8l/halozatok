@@ -1,43 +1,40 @@
-﻿div
-{
-    border: 1px solid coral;
+﻿div {
+    border: 2px solid black;
     border-radius: 25px;
     padding: 20px;
     margin: 10px;
 }
 
-h1
-{
+h1 {
     text-align: center;
 }
 
-span
-{
-    color: coral;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 40px;
+#listak {
+    background-color: grey;
 }
 
-#listak
-{
-    background-color: lightgrey;
-}
-
-.megisfeher
-{
+.megisfeher {
     background-color: white;
     border-radius: 25px;
     width: 20%;
 }
 
-.sorrendi
-{
+.sorrend {
     font-style: italic
 }
 
-img
-{
+img {
     margin: auto;
     display: block;
 }
+
+a {
+    padding: 10px;
+    border-radius: 25px;
+    background-color: blue;
+    color: white;
+}
+
+    a:hover {
+        background-color: white;
+    }
