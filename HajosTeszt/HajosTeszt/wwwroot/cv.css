@@ -10,7 +10,7 @@ h1 {
 }
 
 #listak {
-    background-color: grey;
+    background-color: darkseagreen;
 }
 
 .megisfeher {
@@ -37,4 +37,5 @@ a {
 
     a:hover {
         background-color: white;
+        color:orangered;
     }
