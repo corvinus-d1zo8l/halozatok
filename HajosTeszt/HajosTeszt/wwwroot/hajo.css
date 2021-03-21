@@ -33,10 +33,6 @@ div {
 #kép {
     overflow: hidden;
     flex-shrink: 0;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 15px;
 }
 
 #vezérlő {
@@ -50,14 +46,14 @@ div {
     width: 80px;
     margin: 10px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 15px;
 }
 
 .kerdes {
     margin: 10px;
     border: 2px solid;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 15px;
 }
 

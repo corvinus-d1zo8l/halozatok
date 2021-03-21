@@ -1,0 +1,20 @@
+﻿﻿﻿* {
+    box-sizing: border-box;
+}
+
+#ide {
+    display: inline-block;
+}
+
+.sor {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.doboz {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
