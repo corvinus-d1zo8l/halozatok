@@ -8,51 +8,54 @@ using System.Threading.Tasks;
 
 namespace SzámítógépHálózatok.Controllers
 {
-    [Route("api/jokes")]
+    [Route("api/[controller]")]
     [ApiController]
     public class JokeController : ControllerBase
     {
-
-        public static List<Joke> Jokes = new List<Joke>();
-
-        // GET: api/<JokeController>
+        // GET: api/jokes
         [HttpGet]
-        public ActionResult Get()
+        public IEnumerable<Joke> Get()
         {
-            return new JsonResult(Jokes);
+            FunnyDatabaseContext context = new FunnyDatabaseContext();
+            return context.Jokes.ToList();
         }
 
-        // GET api/<JokeController>/5
+        // GET api/jokes/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public Joke Get(int id)
         {
-            return new JsonResult(Jokes[id]);
+            FunnyDatabaseContext context = new FunnyDatabaseContext();
+            var keresettVicc = (from x in context.Jokes
+                                where x.JokeSk == id
+                                select x).FirstOrDefault();
+            return keresettVicc;
         }
 
-        // POST api/<JokeController>
+        // POST api/jokes
         [HttpPost]
-        public void Post([FromBody] Joke joke)
+        public void Post([FromBody] Joke újVicc)
         {
-            Jokes.Add(joke);
+            FunnyDatabaseContext context = new FunnyDatabaseContext();
+            context.Jokes.Add(újVicc);
+            context.SaveChanges();
         }
 
         // PUT api/<JokeController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Joke joke)
+        public void Put(int id, [FromBody] string value)
         {
-            Jokes[id] = joke;
         }
 
-        // DELETE api/<JokeController>/5
+        // DELETE api/jokes/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            Jokes.RemoveAt(id);
+            FunnyDatabaseContext context = new FunnyDatabaseContext();
+            var törlendőVicc = (from x in context.Jokes
+                                where x.JokeSk == id
+                                select x).FirstOrDefault();
+            context.Remove(törlendőVicc);
+            context.SaveChanges();
         }
-    }
-
-    public class Joke
-    {
-        public string Text { get; set; }
     }
 }
